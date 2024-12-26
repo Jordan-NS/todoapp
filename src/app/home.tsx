@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Text, View, TextInput, FlatList, TouchableOpacity } from 'react-native';
-import { IconCircleCheck, IconTrash, IconCircle, IconCirclePlus } from "@tabler/icons-react-native";
+import { Text, View, TextInput, FlatList, TouchableOpacity, Image, StatusBar } from 'react-native';
+import { IconCheck, IconTrash, IconCircle, IconCirclePlus, IconBorderRadius } from "@tabler/icons-react-native";
 import { s } from "./styles";
 import { colors } from '@/styles/colors';
 import { Button } from '@/components/button';
@@ -32,8 +32,11 @@ export default function Home() {
 
   return (
     <View style={s.container}>
+      <StatusBar barStyle="light-content" />
       <View style={s.topSection}>
-        <Text style={s.logo}>Logo</Text>
+        <View style={s.logoContainer}>
+          <Image source={require('@/assets/flogo.png')} style={s.logo}/>
+        </View>
       </View>
       <View style={s.middleSection}>
         <View style={s.inputContainer}>
@@ -46,27 +49,30 @@ export default function Home() {
           />
         </View>
         <Button style={s.addButton} onPress={addTask}>
-          <Button.Icon icon={IconCirclePlus} />
+          <IconCirclePlus style={s.addIcon} />
         </Button>
       </View>
       <View style={s.bottomSection}>
         <FlatList
+          style={s.flatListContent}
           data={tasks}
           keyExtractor={item => item.id}
           renderItem={({ item }) => (
             <View style={s.taskContainer}>
               <TouchableOpacity onPress={() => toggleTaskCompletion(item.id)}>
                 {item.completed ? (
-                  <IconCircleCheck size={24} color={colors.gray[700]} />
+                  <View style={s.iconChecked}>
+                  <IconCheck size={16} color={colors.gray[100]} />
+                  </View>
                 ) : (
-                  <IconCircle size={24} color={colors.gray[700]} />
+                  <IconCircle size={24} color={colors.blue.base} />
                 )}
               </TouchableOpacity>
               <Text style={item.completed ? s.taskTextCompleted : s.taskText}>
                 {item.text}
               </Text>
               <TouchableOpacity onPress={() => deleteTask(item.id)}>
-                <IconTrash size={24} color={colors.red.base} />
+                <IconTrash size={24} color={colors.gray[300]} />
               </TouchableOpacity>
             </View>
           )}
