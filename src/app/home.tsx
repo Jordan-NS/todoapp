@@ -4,7 +4,7 @@ import { IconCheck, IconTrash, IconCircle, IconCirclePlus, IconBorderRadius } fr
 import { s } from "./styles";
 import { colors } from '@/styles/colors';
 import { Button } from '@/components/button';
-
+import { TaskCounter } from '@/components/taskcounter';
 type Task = {
   id: string;
   text: string;
@@ -30,6 +30,9 @@ export default function Home() {
     setTasks(tasks.filter(task => task.id !== id));
   };
 
+  const createdTasks = tasks.length;
+  const completedTasks = tasks.filter(task => task.completed).length;
+
   return (
     <View style={s.container}>
       <StatusBar barStyle="light-content" />
@@ -52,6 +55,7 @@ export default function Home() {
           <IconCirclePlus style={s.addIcon} />
         </Button>
       </View>
+        <TaskCounter created={createdTasks} completed={completedTasks} />
       <View style={s.bottomSection}>
         <FlatList
           style={s.flatListContent}
@@ -78,6 +82,7 @@ export default function Home() {
           )}
         />
       </View>
+      
     </View>
   );
 }
