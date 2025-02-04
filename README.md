@@ -1,51 +1,74 @@
-# Welcome to your Expo app 👋
+# ✅ TodoApp - Gerencie suas tarefas de forma simples e eficiente!  
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+  <img width="1920" alt="todoapp" src="https://github.com/user-attachments/assets/b6c9e544-5bd3-4d07-96c2-861f5d62f224" />
 
-## Get started
 
-1. Install dependencies
+## 📋 Sobre o Projeto  
 
-   ```bash
-   npm install
-   ```
+O **TodoApp** é um aplicativo mobile desenvolvido durante o desafio da trilha **React Native** do Ignite da **Rocketseat**, para facilitar a organização das suas tarefas diárias. 📝🚀  
+Com uma interface intuitiva e minimalista, você pode adicionar, editar, concluir e remover tarefas de maneira prática.  
 
-2. Start the app
+Criado como um projeto prático, o app foca em produtividade e usabilidade, garantindo uma experiência fluida para os usuários. 🔥  
 
-   ```bash
-    npx expo start
-   ```
+## 🛠️ Tecnologias Utilizadas  
 
-In the output, you'll find options to open the app in a
+- ⚡ **TypeScript** | 📱 **React Native** | 🚀 **Expo**  
+- 🎨 **Styled Components** para estilização  
+- 💾 **Async Storage** para persistência local  
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## ✨ Funcionalidades  
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- 🆕 **Adicionar Tarefas**: Crie novas tarefas facilmente.  
+- ✏️ **Editar Tarefas**: Modifique as tarefas existentes.  
+- ✅ **Marcar como Concluída**: Acompanhe seu progresso.  
+- 🗑️ **Remover Tarefas**: Mantenha sua lista organizada.  
+- 💾 **Salvamento Local**: Suas tarefas são armazenadas no dispositivo.  
 
-## Get a fresh project
+## 🎨 Layout  
 
-When you're ready, run:
+O layout foi pensado para ser simples e funcional.  
+🔗 [Acesse o design no Figma](https://www.figma.com/file/rrbhUJxDZ1U9shnNJVE7QT/ToDo-List-%E2%80%A2-Desafio-React-Native-Copy?fuid=1244062225534394384).  
 
-```bash
-npm run reset-project
+## 🚀 Como Executar o Projeto  
+
+### 📌 Pré-requisitos  
+
+Certifique-se de ter instalado:  
+
+- 🖥️ [Node.js](https://nodejs.org/) (versão LTS recomendada)  
+- 📦 [Expo CLI](https://docs.expo.dev/get-started/installation/)  
+
+### 📖 Passo a Passo  
+
+1️⃣ **Clone o repositório:**  
+
+  
+   git clone https://github.com/Jordan-NS/todoapp.git
+   
+2️⃣ Acesse o diretório do projeto:
+
+ ```bash
+cd todoapp
 ```
+3️⃣ Instale as dependências:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+ ```bash
+npm install
+# ou
+yarn install
+```
+4️⃣ Inicie o aplicativo:
 
-## Learn more
+ ```bash
+npx expo start
+```
+📱 O Expo abrirá uma janela no navegador. Você pode rodar o app em um emulador ou escanear o QR Code com o Expo Go no seu dispositivo móvel.
 
-To learn more about developing your project with Expo, look at the following resources:
+🤝 Contribuição
+Contribuições são bem-vindas! 💜
+Se tiver sugestões de melhorias ou encontrar bugs, abra uma issue ou envie um pull request. 🚀
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+📜 Licença
+Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes. 📄
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# todoapp
+💻 Desenvolvido com 💜 por Jordan-NS. 🚀🔥
